@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '@mui/base/ButtonUnstyled';
+import Button from './Button';
 import Slider from './Slider';
 import PlayerMenu from './PlayerMenu';
 
@@ -77,7 +77,7 @@ const Player = React.forwardRef(function Player(props: { className?: string }, r
               <path d="M18 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </Button>
-          <Button className="rounded-lg text-xs leading-6 font-semibold px-2 ring-2 ring-inset ring-slate-500 text-slate-500 dark:text-slate-100 dark:ring-0 dark:bg-slate-500">
+          <Button className="rounded-lg text-xs leading-6 font-semibold px-2 ring-2 ring-inset ring-slate-500 text-slate-500 dark:text-slate-100 dark:ring-0 dark:bg-slate-500 hover:ring-cyan-500">
             1x
           </Button>
         </div>

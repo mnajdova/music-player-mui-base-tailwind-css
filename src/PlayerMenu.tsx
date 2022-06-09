@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '@mui/base/ButtonUnstyled';
+import Button from './Button';
 import MenuUnstyled, { MenuUnstyledActions } from '@mui/base/MenuUnstyled';
 import MenuItemUnstyled, {
   MenuItemUnstyledProps
@@ -51,7 +51,6 @@ const PlayerMenu = React.forwardRef(function PlayerMenu(props: { className?: str
   return (
     <div {...props} ref={ref}>
       <Button
-        type="button"
         onClick={handleButtonClick}
         onKeyDown={handleButtonKeyDown}
         ref={buttonRef}
