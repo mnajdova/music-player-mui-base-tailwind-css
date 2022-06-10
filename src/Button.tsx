@@ -1,9 +1,15 @@
 import * as React from 'react';
-import ButtonUnstyled, { ButtonUnstyledProps } from '@mui/base/ButtonUnstyled';
+import ButtonUnstyled, { ButtonUnstyledOwnerState, ButtonUnstyledProps } from '@mui/base/ButtonUnstyled';
 
 const Button = React.forwardRef(function Button(props: ButtonUnstyledProps, ref: React.ForwardedRef<HTMLButtonElement>) {
-  const { className, ...other } = props;
-  return (<ButtonUnstyled className={`hover:text-cyan-500 transition-colors ${className}`} {...other} ref={ref} />);
+  const { ...other } = props;
+  return (<ButtonUnstyled
+    componentsProps={{
+      root: (state: ButtonUnstyledOwnerState) => ({ className: `hover:text-cyan-500 transition-colors ${state.focusVisible ? 'outline-0 ring-2 ring-cyan-500' : ''}`})
+    }}
+    {...other}
+    ref={ref}
+  />);
 });
 
 export default Button;

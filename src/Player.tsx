@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Button from './Button';
 import Slider from './Slider';
-import PlayerMenu from './PlayerMenu';
 
 const Player = React.forwardRef(function Player(props: { className?: string }, ref: React.ForwardedRef<HTMLDivElement>) {
   const { className, ...other } = props;
@@ -21,7 +20,6 @@ const Player = React.forwardRef(function Player(props: { className?: string }, r
               Full Stack Radio
             </p>
           </div>
-          <PlayerMenu className="self-start" />
         </div>
         <div className="space-y-2">
           <div className="relative">
@@ -58,7 +56,7 @@ const Player = React.forwardRef(function Player(props: { className?: string }, r
             </svg>
           </Button>
         </div>
-        <Button className="bg-white text-slate-900 dark:bg-slate-100 dark:text-slate-700 flex-none -my-2 mx-auto w-20 h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center" aria-label="Pause">
+        <Button className="bg-white text-slate-900 dark:bg-slate-100 dark:text-slate-700 flex-none -my-2 mx-auto w-20 h-20 rounded-full border-2 border-slate-900/5 shadow-md flex items-center justify-center" aria-label="Pause">
           <svg width="30" height="32" fill="currentColor">
             <rect x="6" y="4" width="4" height="24" rx="2" />
             <rect x="20" y="4" width="4" height="24" rx="2" />
@@ -77,7 +75,7 @@ const Player = React.forwardRef(function Player(props: { className?: string }, r
               <path d="M18 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </Button>
-          <Button className="rounded-lg text-xs leading-6 font-semibold px-2 ring-2 ring-inset ring-slate-500 text-slate-500 dark:text-slate-100 dark:ring-0 dark:bg-slate-500 hover:ring-cyan-500">
+          <Button className="rounded-lg text-xs leading-6 font-semibold px-2 border-2 border-slate-500 text-slate-500 dark:text-slate-100 dark:ring-0 dark:bg-slate-500 hover:ring-cyan-500">
             1x
           </Button>
         </div>
