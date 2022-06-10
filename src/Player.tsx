@@ -24,6 +24,7 @@ const Player = React.forwardRef(function Player(props: { className?: string }, r
         <div className="space-y-2">
           <div className="relative">
             <Slider
+              step={50}
               defaultValue={1456}
               max={4550}
               min={0}
